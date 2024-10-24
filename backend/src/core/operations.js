@@ -118,7 +118,7 @@ async function broadcastEmergencyNotification(db, deviceName, props, app) {
   const message = {
     data: {
       device_name: deviceName,
-      props: props.replace("|", ","),
+      props: props.replaceAll("|", ","),
     },
     notification: {
       title: `Emergencia en ${deviceName}`,
